@@ -58,6 +58,12 @@ logRouter.post("/", (req, res) => {
 
 // edit route
 
+logRouter.get("/:id/edit", (req, res) => {
+    Log.findById(req.params.id, (error, foundLog) => {
+        res.render("edit.ejs", {foundLog});
+    });
+});
+
 
 // show route
 
