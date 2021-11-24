@@ -23,7 +23,7 @@ logRouter.get("/seed", (req, res) => {
 
 // index/read route
 
-logRouter.get("/logs", (req, res) => {
+logRouter.get("/", (req, res) => {
     Log.find({}, (error, allLogs) => {
         res.send("Hello World");
     });

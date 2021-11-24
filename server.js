@@ -3,7 +3,7 @@
 const express = require("express");
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
-const Log = require("./models/log");
+const logsController = require("./controllers/logs");
 
 // Initialize the application
 
@@ -56,12 +56,10 @@ app.use(express.urlencoded({ extended: false }));
 // method-override
 app.use(methodOverride("_method"));
 
-// Mount routes
 
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-});
+// Router middleware
 
+app.use("/logs", logsController);
 
 // Tell app to listen for client requests
 
