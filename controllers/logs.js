@@ -38,6 +38,12 @@ logRouter.get("/new", (req, res) => {
 
 // delete route
 
+logRouter.delete("/:id", (req, res) => {
+    Log.findByIdAndDelete(req.params.id, (error, deletedLog) => {
+        res.redirect("/logs");
+    });
+});
+
 
 // update route
 
