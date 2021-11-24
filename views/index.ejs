@@ -13,7 +13,7 @@
     </nav>    
     <ul>
     <% allLogs.forEach(log => { %>
-        <li><%=log.title%></li>
+        <li><a href="/logs/<%=log._id%>"><%=log.title%></a></li>
     <% }); %>
     </ul>
 </body>

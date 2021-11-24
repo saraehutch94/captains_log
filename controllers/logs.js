@@ -44,6 +44,17 @@ logRouter.get("/new", (req, res) => {
 
 // create route
 
+logRouter.post("/", (req, res) => {
+    if (req.body.shipIsBroken === "on") {
+        req.body.shipIsBroken === true;
+    } else {
+        req.body.shipIsBroken === false;
+    }
+    Log.create(req.body, (error, newLog) => {
+        res.redirect("/logs");
+    });
+});
+
 
 // edit route
 
