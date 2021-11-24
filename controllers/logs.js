@@ -41,6 +41,17 @@ logRouter.get("/new", (req, res) => {
 
 // update route
 
+logRouter.put("/:id", (req, res) => {
+    Log.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        { new : true },
+        (error, updatedLog) => {
+            res.redirect("/logs");
+        }    
+    );
+});
+
 
 // create route
 
