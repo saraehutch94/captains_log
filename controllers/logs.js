@@ -42,6 +42,12 @@ logRouter.get("/new", (req, res) => {
 // update route
 
 logRouter.put("/:id", (req, res) => {
+    if (req.body.shipIsBroken === "on") {
+        req.body.shipIsBroken = true;
+    } else {
+        req.body.shipIsBroken = false;
+    }
+
     Log.findByIdAndUpdate(
         req.params.id,
         req.body,
