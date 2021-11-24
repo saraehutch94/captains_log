@@ -29,6 +29,26 @@ logRouter.get("/", (req, res) => {
     });
 });
 
+// new route
+
+
+// delete route
+
+
+// update route
+
+
+// create route
+
+
+// edit route
+
+
+// show route
+
+
+
+
 // Export router/controller object so that we can require it in server.js
 
 module.exports = logRouter;
