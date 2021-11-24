@@ -8,5 +8,20 @@
 </head>
 <body>
     <h1>Create New Log</h1>
+    <form action="/logs" method="POST">
+        <label>
+            <p>Title:
+            <input type="text" name="title"></p>
+        </label>
+        <label>
+            <p>Entry:
+            <input type="text" name="entry"></p>
+        </label>
+        <label>
+            <p>Is The Ship Broken?
+            <input type="checkbox" name="shipIsBroken"></p>
+        </label>
+        <input type="submit" value="Submit Log"/>
+    </form>
 </body>
 </html>
