@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Log | Captain's Log</title>
+</head>
+<body>
+    <h1>Edit Log</h1>
+    <form action="/logs/<%=foundLog._id%>?_method=PUT" method="POST">
+        <label>
+            <p>Title:
+            <input type="text" name="title" value="<%=foundLog.title%>"></p>
+        </label>
+        <label>
+            <p>Entry:
+            <input type="text" name="entry" value="<%=foundLog.entry%>"></p>
+        </label>
+        <label>
+            <p>Is the ship broken?
+            <input type="checkbox" name="shipIsBroken"
+                <% if (foundLog.shipIsBroken) { %>
+                    checked
+                <% } %>
+            />        
+        </label>
+    </form>
+</body>
+</html>
