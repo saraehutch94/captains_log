@@ -3,6 +3,7 @@
 const express = require("express");
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
+const Log = require("./models/log");
 
 // Initialize the application
 
