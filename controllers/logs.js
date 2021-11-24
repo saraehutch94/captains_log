@@ -31,6 +31,10 @@ logRouter.get("/", (req, res) => {
 
 // new route
 
+logRouter.get("/new", (req, res) => {
+    res.render("new.ejs");
+});
+
 
 // delete route
 
