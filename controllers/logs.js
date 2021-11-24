@@ -61,7 +61,11 @@ logRouter.post("/", (req, res) => {
 
 // show route
 
-
+logRouter.get("/:id", (req, res) => {
+    Log.findById(req.params.id, (error, foundLog) => {
+        res.render("show.ejs", {foundLog});
+    });
+});
 
 
 // Export router/controller object so that we can require it in server.js
