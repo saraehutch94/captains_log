@@ -7,6 +7,11 @@
     <title>Captain's Logs | Home Page</title>
 </head>
 <body>
-    
+    <h1>All of Captain's Logs</h1>
+    <ul>
+    <% allLogs.forEach(log => { %>
+        <li><%=log.title%></li>
+    <% }) %>
+    </ul>
 </body>
 </html>
