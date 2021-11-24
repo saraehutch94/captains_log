@@ -25,7 +25,7 @@ logRouter.get("/seed", (req, res) => {
 
 logRouter.get("/", (req, res) => {
     Log.find({}, (error, allLogs) => {
-        res.send("Hello World");
+        res.render("index.ejs", {allLogs});
     });
 });
 
